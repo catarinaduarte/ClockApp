@@ -1,0 +1,165 @@
+{
+  "settings": [
+    {
+      "id": "background",
+      "type": "swiper",
+      "title": "Change Background",
+      "optionsPerView": 3.5,
+      "options": [
+        {
+          "id": 1,
+          "src": "day/1.jpg",
+          "type": "day",
+          "active": false
+        },
+        {
+          "id": 2,
+          "src": "day/2.jpg",
+          "type": "day",
+          "active": false
+        },
+        {
+          "id": 3,
+          "src": "day/3.jpg",
+          "type": "day",
+          "active": false
+        },
+        {
+          "id": 4,
+          "src": "day/4.jpg",
+          "type": "day",
+          "active": false
+        },
+        {
+          "id": 5,
+          "src": "day/5.jpg",
+          "type": "day",
+          "active": false
+        },
+        {
+          "id": 6,
+          "src": "day/6.jpg",
+          "type": "day",
+          "active": false
+        },
+        {
+          "id": 7,
+          "src": "night/1.jpg",
+          "type": "night",
+          "active": false
+        },
+        {
+          "id": 8,
+          "src": "night/2.jpg",
+          "type": "night",
+          "active": false
+        },
+        {
+          "id": 9,
+          "src": "night/3.jpg",
+          "type": "night",
+          "active": false
+        },
+        {
+          "id": 10,
+          "src": "night/4.jpg",
+          "type": "night",
+          "active": false
+        },
+        {
+          "id": 11,
+          "src": "night/5.jpg",
+          "type": "night",
+          "active": false
+        },
+        {
+          "id": 12,
+          "src": "night/6.jpg",
+          "type": "night",
+          "active": false
+        },
+        {
+          "id": 13,
+          "src": "night/7.jpg",
+          "type": "night",
+          "active": false
+        }
+      ]
+    },
+    {
+      "id": "background_color",
+      "cssVariable": "--background-hue",
+      "type": "color-picker",
+      "title": "Pick Hue Color",
+      "optionsPerView": 7.5,
+      "default": "unset",
+      "options": [
+        { "id": 1, "hex": "#99E6E6" },
+        { "id": 2, "hex": "#E6B3B3" },
+        { "id": 3, "hex": "#FFFF99" },
+        { "id": 4, "hex": "#FFB399" },
+        { "id": 5, "hex": "#E6FF80" },
+        { "id": 6, "hex": "#99FF99" },
+        { "id": 7, "hex": "#33FFCC" },
+        { "id": 8, "hex": "#CC9999" },
+        { "id": 9, "hex": "#FF99E6" },
+        { "id": 10, "hex": "#4DB3FF" },
+        { "id": 11, "hex": "#CCFF1A" },
+        { "id": 12, "hex": "#00E680" },
+        { "id": 13, "hex": "#00B3E6" },
+        { "id": 14, "hex": "#809980" },
+        { "id": 15, "hex": "#999966" },
+        { "id": 16, "hex": "#E6B333" },
+        { "id": 17, "hex": "#66E64D" },
+        { "id": 18, "hex": "#CCCC00" },
+        { "id": 19, "hex": "#1AFF33" },
+        { "id": 20, "hex": "#4DB380" },
+        { "id": 21, "hex": "#B3B31A" },
+        { "id": 22, "hex": "#1AB399" },
+        { "id": 23, "hex": "#CC80CC" },
+        { "id": 24, "hex": "#999933" },
+        { "id": 25, "hex": "#80B300" },
+        { "id": 26, "hex": "#E666B3" },
+        { "id": 27, "hex": "#6680B3" },
+        { "id": 28, "hex": "#E666FF" },
+        { "id": 29, "hex": "#66994D" },
+        { "id": 30, "hex": "#FF6633" },
+        { "id": 31, "hex": "#809900" },
+        { "id": 32, "hex": "#66991A" },
+        { "id": 33, "hex": "#FF4D4D" },
+        { "id": 34, "hex": "#FF33FF" },
+        { "id": 35, "hex": "#4D80CC" },
+        { "id": 36, "hex": "#B366CC" },
+        { "id": 37, "hex": "#FF3380" },
+        { "id": 38, "hex": "#E64D66" },
+        { "id": 39, "hex": "#33991A" },
+        { "id": 40, "hex": "#4D8066" },
+        { "id": 41, "hex": "#FF1A66" },
+        { "id": 42, "hex": "#66664D" },
+        { "id": 43, "hex": "#6666FF" },
+        { "id": 44, "hex": "#E6331A" },
+        { "id": 45, "hex": "#4D8000" },
+        { "id": 46, "hex": "#B34D4D" },
+        { "id": 47, "hex": "#3366E6" },
+        { "id": 48, "hex": "#991AFF" },
+        { "id": 49, "hex": "#B33300" },
+        { "id": 50, "hex": "#9900B3" }
+      ]
+    },
+    {
+      "id": "background_opacity",
+      "cssVariable": "--background-fade",
+      "type": "slider",
+      "title": "Change Hue Opacity",
+      "min": 0,
+      "max": 1,
+      "default": 0.5,
+      "style": {
+        "dotStyle": { "backgroundColor": "black" },
+        "handleStyle": { "backgroundColor": "black", "borderColor": "gray" },
+        "railStyle": { "backgroundColor": "white" },
+        "trackStyle": { "backgroundColor": "black" }
+      }
+    }
+  ]
+}
