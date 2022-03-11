@@ -1,25 +1,28 @@
 import React, { FC, useEffect } from "react";
-import { userSettings } from "../../../zustand";
+import { checkIfNight, userSettings } from "../../../zustand";
 import { AnimatePresence, Variants } from "framer-motion";
 import "./Background.scss";
 import { UiImage } from "../UiImage";
 import { useMobile } from "../../../hooks";
+import useDidUpdateEffect from "../../../hooks/useDidUpdateEffect";
 
-export const Background: FC = () => {
+interface BackgroundProps {}
+
+const BackgroundComp: FC<BackgroundProps> = () => {
   const { isMobile } = useMobile();
 
   const variants: Variants = {
     enter: {
-      scale: !isMobile ? 0.7 : "unset",
+      scale: !isMobile ? 0.7 : 1,
       opacity: 0,
     },
     center: {
       opacity: 1,
-      scale: !isMobile ? 1 : "unset",
+      scale: !isMobile ? 1 : 1,
     },
     exit: {
       opacity: 0,
-      scale: !isMobile ? 1.2 : "unset",
+      scale: !isMobile ? 1.2 : 1,
     },
   };
 
@@ -34,7 +37,10 @@ export const Background: FC = () => {
     },
   };
 
-  const { data, backgroundImages } = userSettings();
+  const { data, backgroundImages, setData, isNight, setIsNight } =
+    userSettings();
+
+  const [nightMode, setNightMode] = React.useState(isNight);
 
   // If no selected user background, use the default background (first in current Images array)
   const bg = data.bg ?? backgroundImages[0];
@@ -52,9 +58,20 @@ export const Background: FC = () => {
     }
   };
 
+  const updateNightMode = () => {
+    setNightMode(checkIfNight());
+  };
+
   useEffect(() => {
     initiateUserBgSettings();
+    const interval = setInterval(updateNightMode, 1000);
+    return () => clearInterval(interval);
   }, []);
+
+  useDidUpdateEffect(() => {
+    setIsNight(nightMode);
+    setData({ ...data, bg: backgroundImages[0] });
+  }, [nightMode, isNight]);
 
   return (
     <>
@@ -64,3 +81,5 @@ export const Background: FC = () => {
     </>
   );
 };
+
+export const Background = React.memo(BackgroundComp);
